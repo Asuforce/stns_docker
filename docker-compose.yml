@@ -1,0 +1,15 @@
+version: '2'
+services:
+  app:
+    image: asuforce/puppet4
+    command: /sbin/init
+    privileged: true
+    hostname: app
+  bastion:
+    extends:
+      service: app
+    hostname: bastion
+  stns:
+    extends:
+      service: app
+    hostname: stns

@@ -1,0 +1,3 @@
+class base {
+  contain '::ssh'
+}
